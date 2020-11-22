@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Come blow this balloon</title>
+    <style>
+        #ballon {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ballon"></div>
+    <script>
+        var index = 0;
+        var tab = Array('red', 'green', 'blue');
+
+        ballon = document.getElementById('ballon');
+        ballon.onclick = change_size_color;
+        ballon.onmouseleave = revers_size_color;
+
+        function change_size_color() {
+            var width = ballon.clientWidth + 10;
+            var height = ballon.clientHeight + 10;
+            if (width > 420) {
+                width = 200;
+                height = 200;
+            }
+            ballon.style.width = width + 'px';
+            ballon.style.height = height + 'px';
+            index++;
+            if (index > 2)
+                index = 0;
+            ballon.style.backgroundColor = tab[index];
+        }
+
+        function revers_size_color() {
+            var width = ballon.clientWidth;
+            var height = ballon.clientHeight;
+            if (width > 200) {
+                width = width - 5;
+                height = height - 5;
+            }
+            ballon.style.width = width + 'px';
+            ballon.style.height = height + 'px';
+            index--;
+            if (index < 0)
+                index = 2;
+            ballon.style.backgroundColor = tab[index];
+        }
+    </script>
+</body>
+
+</html>

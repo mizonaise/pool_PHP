@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>It’s over 9000</title>
+</head>
+
+<body>
+	<input type="text" id="nbr1" placeholder="nbr1"></intput>
+	<select id="operator">
+		<option>+</option>
+		<option>-</option>
+		<option>*</option>
+		<option>/</option>
+		<option>%</option>
+	</select>
+	<input type="text" id="nbr2" placeholder="nb2"></input>
+	<input type="submit" value="Try me !" onclick="submit()"></input>
+	<script>
+		setInterval(() => { alert("Please, use me...") }, 30000);
+
+		function popResult(result) {
+			console.log(result);
+			return (alert(result));
+		}
+
+		function submit() {
+			var left = document.getElementById("nbr1").value.trim();
+			var right = document.getElementById("nbr2").value.trim();
+			var operators = document.getElementById("operator");
+			var operator = operators.options[operators.selectedIndex].text;
+
+			left = parseInt(left, 10)
+			right = parseInt(right, 10)
+			if (isNaN(left) || isNaN(right) || left < 0 || right < 0)
+				return (alert("Error :("));
+			if ((operator === "/" || operator === "%") && right == 0)
+				return (popResult("It's over 9000 !"));
+			switch (operator) {
+				case ("+"):
+					popResult(left + right);
+					break;
+				case ("-"):
+					popResult(left - right);
+					break;
+				case ("*"):
+					popResult(left * right);
+					break;
+				case ("/"):
+					popResult(left / right);
+					break;
+				case ("/"):
+					popResult(left % right);
+					break;
+				default:
+					break;
+			}
+		}		
+	</script>
+</body>
+
+</html>

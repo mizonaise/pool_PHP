@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>It’s over 9000</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <input type="text" id="nbr1" placeholder="nbr1"></intput>
+    <select id="operator">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+        <option>%</option>
+    </select>
+    <input type="text" id="nbr2" placeholder="nb2"></input>
+    <input type="submit" value="Try me !" onclick="submit()"></input>
+    <script>
+        setInterval(() => { alert("Please, use me...") }, 30000);
+        function popResult(result) {
+            console.log(result);
+            return (alert(result));
+        }
+        function submit() {
+            var nb1 = $("#nbr1").val();
+            var nb2 = $("#nbr2").val();
+            if (!$.isNumeric(nb1) || !$.isNumeric(nb2))
+                return alert("Error :(");
+            if ((nb1 = parseInt(nb1) < 0 || (nb2 = parseInt(nb2)) < 0))
+                return alert("Error :(");
+            var op = $('#operator').val();
+            if ((op == '/' || op == '%'))
+                return (popResult("It's over 9000!"));
+            switch (op) {
+                case ('+'):
+                    return (popResult(nb1 + nb2));
+                case ('-'):
+                    return (popResult(nb1 - nb2));
+                case ('*'):
+                    return (popResult(nb1 * nb2));
+                case ('/'):
+                    return (popResult(nb1 / nb2));
+                case ('%'):
+                    return (popResult(nb1 % nb2));
+            }
+        }
+    </script>
+</body>
+
+</html>

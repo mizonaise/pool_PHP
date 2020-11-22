@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Come blow this balloon</title>
+    <style>
+        #ballon {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: red;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="ballon" onclick="change_size_color()" onmouseleave="reverse_size_color()"></div>
+    <script>
+        var index = [];
+        function change_size_color() {
+            index++;
+            if (index > 2)
+                index = 0;
+            if (index == 0)
+                $('#ballon').css('background-color', "#00ff00");
+            else if (index == 1)
+                $('#ballon').css('background-color', "#0000ff");
+            else if (index == 2)
+                $('#ballon').css('background-color', "#ff0000");
+            $('#ballon').css('width', '+=10');
+            $('#ballon').css('height', '+=10');
+            if ($('#ballon').width() > 420 && $('#ballon').height() > 420) {
+                $('#ballon').width(200);
+                $('#ballon').height(200);
+            }
+        }
+        function reverse_size_color() {
+            index--;
+            if (index < 0)
+                index = 2;
+            if (index == 0)
+                $('#ballon').css('background-color', "#00ff00");
+            else if (index == 1)
+                $('#ballon').css('background-color', "#0000ff");
+            else if (index == 2)
+                $('#ballon').css('background-color', "#ff0000");
+            if ($('#ballon').width() != 200 && $('#ballon').height() != 200) {
+                $('#ballon').css('width', '-=5');
+                $('#ballon').css('height', '-=5');
+            }
+        }
+    </script>
+</body>
+
+</html>

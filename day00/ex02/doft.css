@@ -1,0 +1,177 @@
+body {
+	margin: 0;
+	background-color: #505050;
+  }
+  
+.container {
+	height: 100%;
+	width: 1480px;
+	display: block;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+
+.header {
+	height: 150px;
+	border-radius: 10px;
+	background-color: #909090;
+	box-shadow: 10px 10px 10px #000000;
+}
+
+.doft {
+	float: left;
+	height: 88%;
+	padding: 10px;
+}
+
+.scoop {
+	top: 25px;
+	left: 30px;
+	float: right;
+	position: relative;
+}
+
+.reload {
+	height: 15%;
+	margin: 10px;
+	float: right;
+}
+
+.close {
+	top: 120px;
+	right: -30px;
+	float: right;
+	position: relative;
+}
+
+.left-side-bar {
+	flex: 125px;
+	height: 435px;
+	margin-left: 35px;
+	text-align: center;
+	margin-right: 30px;
+	border-radius: 10px;
+	background-color: #909090;
+	box-shadow: 10px 10px 10px #000000;
+}
+.main {
+	flex: 1024px;
+	height: 100%;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: #909090;
+	box-shadow: 10px 10px 10px #000000;
+}
+
+.right-side-bar {
+	flex: 125px;
+	height: 435px;
+	margin-left: 30px;
+	margin-right: 35px;
+	border-radius: 10px;
+	background: #909090;
+	box-shadow: 10px 10px 10px #000000;
+}
+.wrap {
+	display: flex;
+	margin: inherit;
+}
+.arrow {
+	width: 48%;
+	margin: auto;
+	display: block;
+	margin-top: 12px;
+}
+.mainimg {
+	width: 49%;
+	margin: auto;
+	display: block;
+	margin-top: 9px;
+}
+.oeil {
+	margin: auto;
+	display: block;
+	margin-top: 5px;
+	border-radius: 3px;
+	border: #ff0000 5px solid;
+}
+.outil {
+	width: 49%;
+	margin: auto;
+	display: block;
+	margin-top: 3px;
+}
+.chat {
+	width: 49%;
+	margin: auto;
+	display: block;
+	margin-top: 10px;
+}
+.book {
+	width: 48%;
+	margin: auto;
+	display: block;
+	margin-top: 10px;
+}
+.towel {
+	width: 49%;
+	margin: auto;
+	display: block;
+	margin-top: 6px;
+}
+.briq {
+	width: 120px;
+	height: 70px;
+	margin: auto;
+	display: block;
+	margin-top: 10px;
+	background-image: url(resources/brick.jpg);
+}
+.form {
+	z-index: 0;
+	left: -25px;
+	bottom: 95px;
+	width: 517px;
+	height: 170px;
+	position: relative;
+	border-radius: 10px;
+	background-color: #88ff89;
+	box-shadow: 10px 10px 10px #000000;
+}
+.line {
+	font-size: 35px;
+	display: contents;
+	line-height: 23px;
+	font-family: serif;
+}
+ul {
+	margin: 0;
+	list-style: none;
+}
+.list-gap {
+	left: -30px;
+	font-size: 18px;
+	padding-top: 10px;
+	position: relative;
+	font-family: sans-serif;
+}
+.list-shadow {
+	display: contents;
+	text-shadow: 4px 5px 4px #ff0000;
+}
+.form-style {
+	margin: 6px 10px;
+}
+.input-style {
+	width: 368px;
+}
+.question {
+	font-style: italic;
+	margin: 0;
+}
+.button-style {
+	color: #000000;
+	background: white;
+}
